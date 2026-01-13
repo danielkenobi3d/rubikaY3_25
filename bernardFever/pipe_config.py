@@ -1,13 +1,13 @@
 import os
-asset_list = ['male']
-asset_types = ['characters', 'props']
-project_path = 'C:/Users/danie/OneDrive/Rendermotion/Shortfilm2023/short_film/assets'
+asset_list = ['Michel']
+asset_types = ['Characters', 'Props']
+project_path = ('Z:/__03-CLASSE_ANIM_Y3/_projects/TEAM_1_bof/scenes/Asset_Tasks')
 asset_path = '{}'
-model_path = 'modeling'
-rig_path = 'rigging'
+model_path = 'Model'
+rig_path = 'Rig'
 data_path = f'{os.getlogin()}/data'
-publish_folder = '_publish'
-modules_path = 'rigBuilds.assets'
+publish_folder = 'publish'
+modules_path = 'rubikaY3_25.bernardFever.assets'
 default_module = 'default_character'
 facial_definition = 'facial_definition'
 geo_definition = 'geo_definition'
