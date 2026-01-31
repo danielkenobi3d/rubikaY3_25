@@ -244,6 +244,10 @@ class RigByped(rigBase.RigBase):
 
         self.neck_head_space_switch.build(self.neck_head, self.rig_world, self.cog)
 
+        jaw_points = [each.format('C') for each in self.jaw_root]
+        self.jaw.create_point_base(*jaw_points)
+        self.jaw.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
+
         l_anthena_points = [each.format('L') for each in self.anthena_root]
         self.l_anthena.create_point_base(*l_anthena_points)
         self.l_anthena.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
