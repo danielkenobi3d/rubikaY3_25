@@ -19,7 +19,7 @@ class RigPlaneWrap(rigSingleJoint.RigSingleJoint):
         super(RigPlaneWrap, self).create_point_base(*locator_list)
         self._model.plane_transform, self._model.plane_creation = pm.polyPlane()
         pm.matchTransform(self.plane_transform,locator_list[0])
-        self.plane_transform.rotateX.set(-90)
+        #self.plane_transform.rotateX.set(-90)
         pm.skinCluster(self.joints,self.plane_transform)
         pm.select(self.plane_transform, wrapped_geo)
         mel.eval('CreateShrinkWrap;')
@@ -30,6 +30,7 @@ class RigPlaneWrap(rigSingleJoint.RigSingleJoint):
         self.shrink_wrap.offset.set(0.008)
         self.shrink_wrap.projection.set(3)
         self.offset_group =  self.create.group.point_base(self.controls[0])
+        self.rig_system.display.overrideDisplayType.set(2)
 
 if __name__ == '__main__':
     my_rig = RigPlaneWrap()
