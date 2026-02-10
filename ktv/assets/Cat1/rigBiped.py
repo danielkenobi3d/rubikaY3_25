@@ -55,6 +55,9 @@ class RigBypedModel(rigBase.BaseModel):
         self.l_ear = rigFK.RigFK()
         self.r_ear = rigFK.RigFK()
 
+        self.l_eyebrow = rigFK.RigFK()
+        self.r_eyebrow = rigFK.RigFK()
+
 
 class RigByped(rigBase.RigBase):
     def __init__(self, *args, **kwargs):
@@ -87,6 +90,8 @@ class RigByped(rigBase.RigBase):
         self.gums_root = [u'C_gums00_reference_pnt']
         self.ears_root = ['{}_ear00_reference_pnt', '{}_ear01_reference_pnt', '{}_ear02_reference_pnt', '{}_ear03_reference_pnt']
         self.anthena_root = ['{}_antenna00_reference_pnt', '{}_antenna01_reference_pnt', '{}_antenna02_reference_pnt', '{}_antenna03_reference_pnt']
+
+        self.eyebrow_root = ['{}_eyebrow00_reference_pnt', '{}_eyebrow01_reference_pnt']
 
     @property
     def neck_head(self):
@@ -146,7 +151,7 @@ class RigByped(rigBase.RigBase):
 
     @property
     def r_arm_space_switch(self):
-        return self._model.l_arm_space_switch
+        return self._model.r_arm_space_switch
     @property
     def l_leg_space_switch(self):
         return self._model.l_leg_space_switch
@@ -261,6 +266,15 @@ class RigByped(rigBase.RigBase):
         r_ear_points = [each.format('R') for each in self.ears_root]
         self.r_ear.create_point_base(*r_ear_points)
         self.r_ear.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
+
+
+        l_eyebrow_points = [each.format('L') for each in self.eyebrow_root]
+        self.l_eyebrow.create_point_base(*l_eyebrow_points)
+        self.l_eyebrow.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
+        r_eyebrow_points = [each.format('R') for each in self.eyebrow_root]
+        self.r_eyebrow.create_point_base(*r_eyebrow_points)
+        self.r_eyebrow.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
+
 
         # self.gums.create_point_base(*self.gums_root)
         # self.gums.set_parent(self.neck_head)
