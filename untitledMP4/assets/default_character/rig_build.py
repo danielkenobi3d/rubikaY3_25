@@ -1,5 +1,5 @@
 from builder.pipeline import environment
-from builder.pipeline.mgear import io
+from RMPY.rig.biped import rigBiped
 from RMPY.core import data_save_load
 from RMPY.core import search_hierarchy
 from RMPY.core import controls
@@ -27,9 +27,9 @@ def facial_rig():
     rig_facial.build()
 
 
-def build_rig():
-    io.build_template()
-
+def build_biped():
+    rig_biped = rigBiped.RigByped()
+    rig_biped.build()
 
 def custom_rig():
     pass
