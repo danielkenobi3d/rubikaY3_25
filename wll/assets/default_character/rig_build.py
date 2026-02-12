@@ -7,7 +7,7 @@ from RMPY.rig import rigHierarchy
 import pymel.core as pm
 from pathlib import Path
 from rubikaY3_25.wll.assets.default_character import rig_facial
-
+from RMPY.rig.biped import rigBiped
 
 def import_geometry():
     env = environment.Environment()
@@ -30,6 +30,9 @@ def facial_rig():
 def build_rig():
     io.build_template()
 
+def build_biped():
+    rig_biped = rigBiped.RigByped()
+    rig_biped.build()
 
 def custom_rig():
     pass

@@ -4,6 +4,7 @@ from RMPY.core import data_save_load
 from RMPY.core import search_hierarchy
 from RMPY.core import controls
 from RMPY.rig import rigHierarchy
+from RMPY.rig.biped import rigBiped
 import pymel.core as pm
 from pathlib import Path
 from rubikaY3_25.bernardFever.assets.default_character import rig_facial
@@ -26,6 +27,9 @@ def import_reference_points():
 def facial_rig():
     rig_facial.build()
 
+def build_biped():
+    rig_biped = rigBiped.RigByped()
+    rig_biped.build()
 
 def build_rig():
     io.build_template()
