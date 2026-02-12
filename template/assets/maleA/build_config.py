@@ -5,7 +5,7 @@ build = {
         ('Import reference points', ['rig_build.import_reference_points'])
         ],
     'rig': [
-        ('build biped', ['rig_build.build_biped']),
+        # ('build rig', ['rig_build.build_rig']),
         ('custom rig', ['rig_build.custom_rig'])
         ],
     'load data': [
