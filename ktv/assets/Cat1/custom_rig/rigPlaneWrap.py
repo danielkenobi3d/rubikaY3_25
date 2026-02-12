@@ -31,6 +31,7 @@ class RigPlaneWrap(rigSingleJoint.RigSingleJoint):
         self.shrink_wrap.projection.set(3)
         self.offset_group =  self.create.group.point_base(self.controls[0])
         self.rig_system.display.overrideDisplayType.set(2)
+        self.controls[0].visibility.set(False)
 
 if __name__ == '__main__':
     my_rig = RigPlaneWrap()

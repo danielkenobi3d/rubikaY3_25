@@ -7,7 +7,9 @@ from RMPY.rig import rigHierarchy
 import pymel.core as pm
 from pathlib import Path
 from rubikaY3_25.ktv.assets.default_character import rig_facial
-
+from rubikaY3_25.ktv.assets.Cat1.snippets import wrapTest
+import importlib
+importlib.reload(wrapTest)
 
 def import_geometry():
     env = environment.Environment()
@@ -32,7 +34,7 @@ def build_rig():
 
 
 def custom_rig():
-    pass
+    wrapTest.build_face()
 
 
 def load_skinning_data():
