@@ -94,15 +94,15 @@ def build_face():
             )
 
 
-    root_point = pm.ls('C_softModJaw00_reference_pnt')[0]
-    new_soft = RigSoftMod.SoftModRig()
-    geo = ['C_plane00_mouth_msh', 'C_Cat_Body2']
-
-    new_soft.create_point_base(root_point, geo=geo,
-                               type='box',
-                               size=.2,
-                               centered=True)
-    new_soft.set_parent(pm.ls('C_fk00_jaw_ctr')[0])
+    # root_point = pm.ls('C_softModJaw00_reference_pnt')[0]
+    # new_soft = RigSoftMod.SoftModRig()
+    # geo = ['C_plane00_mouth_msh', 'C_Cat_Body2']
+    #
+    # new_soft.create_point_base(root_point, geo=geo,
+    #                            type='box',
+    #                            size=.2,
+    #                            centered=True)
+    # new_soft.set_parent(pm.ls('C_fk00_jaw_ctr')[0])
 
 
 
