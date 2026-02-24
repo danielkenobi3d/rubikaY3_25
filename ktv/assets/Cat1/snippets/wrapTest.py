@@ -54,6 +54,7 @@ def build_face():
     L_eye_connections[0][0] // L_eye_connections[0][1]
     L_eye_shader.addMember(L_plane00_eye_msh)
 
+
     R_eye_shader = pm.ls('standardSurface2SG')[0]
     R_eye_connections = pm.listConnections(R_plane00_eye_msh.getShape() , type='shadingEngine', plugs=True, connections=True )
     R_eye_connections[0][0] // R_eye_connections[0][1]
@@ -63,6 +64,19 @@ def build_face():
     C_mouth_connections = pm.listConnections(C_plane00_mouth_msh.getShape() , type='shadingEngine', plugs=True, connections=True )
     C_mouth_connections[0][0] // C_mouth_connections[0][1]
     C_mouth_shader.addMember(C_plane00_mouth_msh)
+
+    # REMOVE CAST SHADOWS FACE
+
+    C_Cat_Nose = pm.ls('C_Cat_Nose')[0]
+    R_Cat_Eyebrow = pm.ls('R_Cat_Eyebrow')[0]
+    L_Cat_Eyebrow = pm.ls('L_Cat_Eyebrow')[0]
+
+    C_Cat_Nose.getShape().castsShadows.set(0)
+    R_Cat_Eyebrow.getShape().castsShadows.set(0)
+    L_Cat_Eyebrow.getShape().castsShadows.set(0)
+    L_plane00_eye_msh.getShape().castsShadows.set(0)
+    R_plane00_eye_msh.getShape().castsShadows.set(0)
+    C_plane00_mouth_msh.getShape().castsShadows.set(0)
 
     # -----------------------------------------------------------------------------------------
     # FRAME OFFSET
@@ -92,6 +106,11 @@ def build_face():
                 driverValue=i,
                 value=i
             )
+
+
+
+
+
 
 
     # root_point = pm.ls('C_softModJaw00_reference_pnt')[0]
