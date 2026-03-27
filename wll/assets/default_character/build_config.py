@@ -7,7 +7,8 @@ build = {
         ],
     'rig': [
         ('build rig', ['rig_build.build_rig']),
-        ('custom rig', ['rig_build.custom_rig'])
+        ('custom rig', ['rig_build.custom_rig']),
+        ('Visibility switches', ['visibility_switches.build'] )
         ],
     'load data': [
         ('load skinning', ['rig_build.load_skinning_data']),
