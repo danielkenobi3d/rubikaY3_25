@@ -253,9 +253,9 @@ class RigByped(rigBase.RigBase):
 
 
         # JAW
-        jaw_points = [each.format('C') for each in self.jaw_root]
-        self.jaw.create_point_base(*jaw_points)
-        self.jaw.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
+        # jaw_points = [each.format('C') for each in self.jaw_root]
+        # self.jaw.create_point_base(*jaw_points)
+        # self.jaw.set_parent(self.neck_head, create_hierarchy_joints=True, output_joint_rig=self.rig_output)
 
         # ANTHENAS
         # root_l_ant = pm.ls('L_antenna00_reference_pnt')[0]
