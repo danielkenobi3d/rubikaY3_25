@@ -231,7 +231,7 @@ class RigByped(rigBase.RigBase):
         self.neck_head.create_point_base(*self.neck_root)
         self.jaw.create_point_base(*self.jaw_root)
 
-        self.eyes.create_point_base(*self.eyes_root)
+        self.eyes.create_point_base(*self.eyes_root, aim_distance=3)
         self.eye_space_switch.build(self.eyes, self.neck_head, self.rig_world)
 
         self.neck_head.set_parent(self.spine, create_hierarchy_joints=True, output_joint_rig=self.rig_output)

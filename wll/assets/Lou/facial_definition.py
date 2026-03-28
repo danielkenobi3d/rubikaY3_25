@@ -109,11 +109,7 @@ correctives_dict = dict(
 )
 
 direct_blendshape = {
-    'character': 'head_msh',
-    'mustache': 'mustache_grroming',
-    'Leyebrow': 'eyebrow_L_msh',
-    'Reyebrow': 'eyebrow_R_msh',
-    'eyelash': 'eyelashes_grooming'
+    'character': 'retopoBody',
 }
 
 jaw_layer = [u'character']
