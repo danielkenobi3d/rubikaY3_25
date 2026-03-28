@@ -1,5 +1,6 @@
 from builder.pipeline import environment
 from RMPY.rig.biped import rigBiped
+from rubikaY3_25.untitledMP4.assets.CRT_KASPER.custom_rig import rigBiped
 from RMPY.core import data_save_load
 from RMPY.core import search_hierarchy
 from RMPY.core import controls
@@ -7,7 +8,8 @@ from RMPY.rig import rigHierarchy
 import pymel.core as pm
 from pathlib import Path
 from rubikaY3_25.untitledMP4.assets.default_character import rig_facial
-
+import importlib
+importlib.reload(rigBiped)
 
 def import_geometry():
     env = environment.Environment()
