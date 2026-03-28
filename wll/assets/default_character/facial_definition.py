@@ -155,7 +155,7 @@ correctives_dict = dict(
 )
 
 direct_blendshape = {
-    'character': 'C_BODY_001_HIGH'
+    'character': 'retopoBody'
 }
 
 jaw_layer = [u'character']
